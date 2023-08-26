@@ -1,0 +1,235 @@
+.youtube{
+    text-align: center;
+}
+
+/*==================== BACKGROUND COLOR ====================*/
+
+.youtube__background{
+  transform: translateX(100%);
+  animation: slideBackground 1s forwards;
+  background-color: #ffd3ed;
+  position: fixed;
+}
+
+#youtube__up {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  z-index: -1;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #e4ff9e, #ff4083);
+  filter: blur(80px);
+  animation: down 40s infinite;
+}
+
+#youtube__down {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #f978ab, #ff7fb2);
+  filter: blur(80px);
+  animation: up 30s infinite;
+}
+
+#youtube__left {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  z-index: -1;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #fb76a2, #b1fe3c);
+  filter: blur(80px);
+  animation: right 40s infinite;
+}
+
+#youtube__right {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  z-index: -1;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #ff60ba, #0bfcc4);
+  filter: blur(80px);
+  animation: left 30s infinite;
+}
+
+@keyframes down {
+  0%, 100% {
+    top: -100px;
+  }
+  70% {
+    top: 100%;
+  }
+}
+
+@keyframes up {
+  0%, 100% {
+    bottom: -100px;
+  }
+  70% {
+    bottom: 100%;
+  }
+}
+
+@keyframes right {
+  0%, 100% {
+    left: -100px;
+  }
+  70% {
+    left: 700px;
+  }
+}
+
+@keyframes left {
+  0%, 100% {
+    right: -100px;
+  }
+  70% {
+    right: 700px;
+  }
+}
+
+@keyframes slideBackground {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+.youtube__main{
+    z-index: 1000;
+}
+
+.youtube__section {
+  z-index: 1000;
+  padding: 2rem 0 4rem;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.youtube__section__title {
+  font-size: var(--h1-font-size);
+}
+
+.youtube__section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.youtube__section__title, 
+.youtube__section__subtitle {
+  text-align: center;
+}
+
+/*==================== YOUTUBE ====================*/
+
+.youtube__section{
+    height: 250vh;
+    z-index: 1000;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.youtube__container{
+    gap: 1rem;
+    width: 100%;
+}
+  
+.youtube__content{
+    padding-top: 10rem;
+}
+
+.youtube__subtitle{
+    font-size: 17px;
+    font-family: var(--span-font);
+    font-weight: 500;
+    width: 65rem;
+    text-align: left;
+    color: var(--first-color-second);
+}
+
+.youtube__year{
+    font-size: 17px;
+    font-family: var(--span-font);
+    font-weight: 500;
+    width: 65rem;
+    text-align: left;
+    color: var(--first-color-second);
+}
+
+.youtube__line{
+    background: var(--first-color-second);
+    width: 500px;
+    height: 1px;
+}
+
+.youtube__title{
+    margin-top: 70px;
+    position: relative;
+}
+
+.youtube__title span{
+    font-weight: 200;
+    position: relative;
+    display: inline-block;
+    font-size: 100px;
+    color: var(--first-color-second);
+    text-transform: uppercase;
+    animation: flip 3s infinite;
+    animation-delay: calc(.2s * var(--i));
+    font-family: var(--second-font);
+}
+
+@keyframes flip{
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+}
+
+.youtube__description{
+    font-size: 17px;
+    font-family: var(--span-font);
+    font-weight: 500;
+    width: 65rem;
+    text-align: justify;
+    margin-top: 20px;
+    color: var(--first-color-second);
+}
+
+.youtube__link__description{
+    font-size: 17px;
+    font-family: var(--span-font);
+    font-weight: 500;
+    width: 65rem;
+    margin-top: 65px;
+    font-size: 20px;
+    text-align: right;
+    color: var(--first-color-second);
+}
+
+.youtube__link{
+    font-size: 25px;
+    text-align: right;
+}
+
+.youtube__videos{
+    margin-top: 100px;
+}
+
+.youtube__video{
+    margin-bottom: 100px;
+    filter: grayscale(50%);
+}
+
+.youtube__video:hover{
+  filter: grayscale(0%);
+}

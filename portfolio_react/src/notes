@@ -1,0 +1,60 @@
+{/* <div className="qualification__mainbox">
+                        <div className="qualification__wrapper">
+                          {DATA.map(el=>{
+                            return (
+                              <div key={el.id} ref={el.ref}>
+                                <h1>{el.year}</h1>
+                                <p>{el.name}</p>
+                              </div>
+                            )})}
+                        </div>
+                        <div className='line' ref={lineRef}></div>
+                      </div> */}
+
+                      {/* <div className="qualification__tabs">
+                        <div className="qualification__button">
+                          <i className="uil uil-graduation-cap qualification__icon"></i>
+                          Education
+                        </div>
+                        <div className="qualification__button">
+                          <i className="uil uil-briefcase-alt qualification__icon"></i>
+                          Work
+                        </div>
+                      </div> */}
+
+                      <div class="swiper-slide">
+                        <section className="contact section" id="contact">
+                          <div className="home__social">
+                            <a href="https://www.linkedin.com/in/thanistha-bisalputra-4b6109257" target="_blank" className="home__social-icon"> Linkedin
+                              <i className="uil uil-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/thanisthab" target="_blank" className="home__social-icon"> Github
+                              <i className="uil uil-github"></i>
+                            </a>
+                          </div>
+                        </section>
+                      </div>
+
+                      // timeline
+    // .from(e1Ref.current, {autoAlpha: 0, x: -100, duration: .5})
+    // .from(e2Ref.current, {autoAlpha: 0, x: -100, duration: .5})
+    // .from(e3Ref.current, {autoAlpha: 0, x: -100, duration: .5})
+    // .to(e1Ref.current, {autoAlpha: 0, x: -100, duration: .5, delay: 1})
+    // .to(e2Ref.current, {autoAlpha: 0, x: -100, duration: .5})
+    // .to(e3Ref.current, {autoAlpha: 0, x: -100, duration: .5})
+    // .to(lineRef.current,{opacity: 0, duration: 1})
+
+    // const timeline = gsap.timeline({
+      //   repeat: false,
+      //   defaults:{ duration: 1, ease: "easeInOut" }
+      // })
+    
+      // const e1Ref = useRef()
+      // const e2Ref = useRef()
+      // const e3Ref = useRef()
+      // const lineRef = useRef()
+      // const DATA = [
+      //   {id: 1, year: 2007, name: 'event one', ref: e1Ref},
+      //   {id: 2, year: 2007, name: 'event two', ref: e2Ref},
+      //   {id: 3, year: 2007, name: 'event three', ref: e3Ref},
+      // ]

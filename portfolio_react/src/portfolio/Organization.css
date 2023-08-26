@@ -1,0 +1,224 @@
+.organization{
+    text-align: center;
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;700&family=Castoro+Titling&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital@0;1&family=Dela+Gothic+One&family=EB+Garamond:ital@0;1&family=Gloock&family=Imbue&family=Inconsolata:wght@300;400&family=Instrument+Serif:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800&family=Italiana&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,400;0,800;1,400;1,800&family=Nanum+Myeongjo&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital@0;1&family=Tinos:ital@0;1&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&family=Vollkorn:ital,wght@0,400;1,400;1,500&display=swap');
+
+/*==================== BACKGROUND COLOR ====================*/
+
+.organization__background{
+ z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #ffd3ed;
+}
+
+#organization__up {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #e4ff9e, #ff4083);
+  filter: blur(80px);
+  animation: down 40s infinite;
+  bottom: 0;
+}
+
+#organization__down {
+  position: absolute;
+  right: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #f978ab, #ff7fb2);
+  filter: blur(80px);
+  animation: up 30s infinite;
+  top: 0;
+}
+
+#organization__left {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #fb76a2, #b1fe3c);
+  filter: blur(80px);
+  animation: right 40s infinite;
+  bottom: 0;
+}
+
+#organization__right {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #ff60ba, #0bfcc4);
+  filter: blur(80px);
+  animation: left 30s infinite;
+  top: 0;
+}
+
+@keyframes down {
+  0%, 100% {
+    top: -100px;
+  }
+  70% {
+    top: 100%;
+  }
+}
+
+@keyframes up {
+  0%, 100% {
+    bottom: -100px;
+  }
+  70% {
+    bottom: 100%;
+  }
+}
+
+@keyframes right {
+  0%, 100% {
+    left: -100px;
+  }
+  70% {
+    left: 100%;
+  }
+}
+
+@keyframes left {
+  0%, 100% {
+    right: -100px;
+  }
+  70% {
+    right: 100%;
+  }
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+.section {
+    padding: 2rem 0 4rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section__title {
+    font-size: var(--h1-font-size);
+  }
+  
+  .section__subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+  }
+  
+  .section__title, 
+  .section__subtitle {
+    text-align: center;
+  }
+
+/*==================== THAISA ====================*/
+
+.thaisa__section{
+    height: 150vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.thaisa__container{
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+  
+.thaisa__content{
+  padding-top: 5rem;
+}
+
+.thaisa__text{
+  position: absolute;
+  z-index: 1000;
+  color: #ff338f;
+}
+
+.thaisa__title{
+  width: 50rem;
+  text-align: left;
+    padding-top: 8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 85px;
+}
+
+.thaisa__description{
+  text-align: justify left;
+  text-align: left;
+  width: 56rem;
+}
+
+.thaisa__link{
+  margin-top: -20rem;
+  margin-left: 55rem;
+  animation: drop 2s ease forwards;
+}
+
+@keyframes drop{
+  0%{opacity: 0}
+  100%{transform: translateY(500px)}
+}
+
+.thaisa__link a{
+  font-size: 110px;
+}
+
+.thaisa__link a:hover{
+  font-size: 115px;
+}
+
+/*==================== ILLINOIS SPACE SOCIETY ====================*/
+
+.iss__section{
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.iss__container{
+    gap: 1rem;
+    width: 100%;
+}
+  
+.iss__content{
+    padding-top: 5rem;
+}
+
+.iss__title{
+    font-family: 'Playfair Display', serif;
+    color: #ff338f;
+    font-size: 85px;
+    text-align: right;
+}
+
+.iss__description{
+  color: #ff338f;
+  text-align: right;
+  text-align: justify right;
+}
+
+.iss__link{
+  margin-top: 12rem;
+  margin-right: 50rem;
+}
+
+.iss__link a{
+  font-size: 110px;
+}
+
+.iss__link a:hover{
+  font-size: 115px;
+}
