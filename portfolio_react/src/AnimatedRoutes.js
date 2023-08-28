@@ -8,6 +8,7 @@ import Midninestudios from './portfolio/Midninestudios.js';
 import Youtube from './portfolio/Youtube.js';
 import Organization from './portfolio/Organization.js';
 import Fatbakers from './portfolio/Fatbakers.js';
+import ContactMe from './ContactMe.js';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
                 <Route path="/organization" element={<Organization/>} />
                 <Route path="/youtube" element={<Youtube/>} />
                 <Route path="/fatbakers" element={<Fatbakers/>} />
+                <Route path="/contactme" element={<ContactMe/>} />
             </Routes>
         </AnimatePresence>
     )

@@ -38,8 +38,9 @@ function Header() {
             className="header"
             id="header"
           >
-            <a href="http://localhost:3002/" className="nav__logo">c/</a>
+            <a href="/" className="nav__logo">AmyB./</a>
             <Link to="/portfolio" className="nav__link">Projects</Link>
+            <Link to="/contactme" className="nav__link">Contact ME</Link>
           </motion.header>
     </header>
   )

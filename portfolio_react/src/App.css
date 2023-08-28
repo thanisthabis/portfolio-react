@@ -10,6 +10,10 @@
   margin-bottom: 0px;
 }
 
+.App{
+  /* cursor: url('../src/cursor_flower_1.svg'), auto; */
+}
+
 /*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;700&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800&family=Italiana&family=Manrope:wght@200;300;400;500;600;700;800&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Tinos:ital@0;1&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&family=Vollkorn:ital,wght@0,400;1,400;1,500&display=swap');
 
@@ -20,6 +24,9 @@
     /* HSL color mode */
     --first-color: hsl(336, 100%, 79%);
     --first-color-second: #fe0055;
+    --first-color-third: #ff4083;
+    --first-color-third-lighter: #ff85b0;
+    --first-color-black: black;
     --first-color-yellow: #f7ffb1;
     --first-color-white: #ffffff;
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -166,7 +173,7 @@ span {
 .nav__logo{
   font-family: var(--first-font);
   font-size: 35px;
-  color: var(--first-color-lighter);
+  color: var(--first-color-white);
   text-decoration: none;
 }
 
@@ -179,7 +186,7 @@ span {
   display: flex;
   align-items: center;
   font-size: 25px;
-  color: var(--first-color-lighter);
+  color: var(--first-color-white);
   font-weight: var(--font-medium);
   font-family: var(--first-font);
   text-decoration: none;

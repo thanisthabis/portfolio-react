@@ -1,10 +1,10 @@
-.portfolio{
+.contactme{
     text-align: center;
 }
 
 /*==================== BACKGROUND COLOR ====================*/
 
-.portfolio__background {
+.contactme__background {
   z-index: -1;
   width: 100%;
   height: 100%;
@@ -12,7 +12,7 @@
   background-color: #ffb4cd;
 }
 
-#portfolio__up {
+#contactme__up {
   position: absolute;
   height: 800px;
   width: 800px;
@@ -23,7 +23,7 @@
   animation: down 40s infinite;
 }
 
-#portfolio__down {
+#pcontactme__down {
   position: absolute;
   right: 0;
   z-index: -1;
@@ -35,7 +35,7 @@
   animation: up 30s infinite;
 }
 
-#portfolio__left {
+#contactme__left {
   position: absolute;
   height: 800px;
   width: 800px;
@@ -46,7 +46,7 @@
   animation: right 40s infinite;
 }
 
-#portfolio__right {
+#contactme__right {
   position: absolute;
   height: 500px;
   width: 500px;
@@ -93,67 +93,13 @@
   }
 }
 
-/*==================== PORTFOLIO ====================*/
-.portfolio__section {
+/*==================== CONTACT ME ====================*/
+.contactme__section {
   height: 100vh;
   width: 100%;
 }
   
-.portfolio__container {
+.contactme__container {
   gap: 1rem;
   width: 100%;
-}
-.portfolio__content,
-
-.portfolio__links{
-    display: flex;
-    flex-direction: column;
-}
-
-.portfolio__links span{
-  color: var(--first-color-lighter);
-}
-
-.portfolio__links span:hover{
-  color: var(--first-color-second);
-}
-
-.portfolio__link__midnine{
-  color: var(--first-color-lighter);
-  text-decoration: none;
-}
-
-.portfolio__link__midnine:hover{
-    font-style: italic;
-    text-decoration: underline;
-}
-
-.portfolio__link__organization{
-  text-decoration: none;
-  color: var(--first-color-lighter);
-}
-
-.portfolio__link__organization:hover{
-    font-style: italic;
-    text-decoration: underline;
-}
-
-.portfolio__link__fatbakers{
-  text-decoration: none;
-  color: var(--first-color-lighter);
-}
-
-.portfolio__link__fatbakers:hover{
-    font-style: italic;
-    text-decoration: underline;
-}
-
-.portfolio__link__youtube{
-  text-decoration: none;
-  color: var(--first-color-lighter);
-}
-
-.portfolio__link__youtube:hover{
-  font-style: italic;
-  text-decoration: underline;
 }

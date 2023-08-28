@@ -3,42 +3,6 @@
     height: 100%;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0 0 var(--header-height) 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: var(--font-semi-bold);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /*==================== BACKGROUND COLOR ====================*/
 
 .home__background{
@@ -195,18 +159,20 @@ img {
 
 .home__content {
   padding-top: 3.5rem;
+  z-index: 1000;
 }
 
 .home__data{
   text-align: center;
+  z-index: 1000;
 }
 
 .home__title{
-  font-family: 'Anuphan', sans-serif;
+  font-family: var(--thai-font);
   font-weight: 300;
   margin-top: 200px;
   font-size: 50px;
-  color: rgb(255, 249, 237);
+  color: var(--first-color-white);
   padding: 25px;
   animation: none;
 }
@@ -217,18 +183,18 @@ img {
 
 .home__description {
   margin-top: 200px;
-  margin-left: 800px;
-  width: 38rem;
+  margin-left: 650px;
+  width: 45rem;
   text-align: justify;
   margin-bottom: var(--mb-2);
 }
 
 .home__description span {
-  color: rgb(255, 249, 237);
+  color: var(--first-color-white);
 }
 
 .home__description :hover{
-  color: rgb(255, 70, 98);
+  color: var(--first-color-second);
 }
 
 /*==================== SKILLS ====================*/
@@ -247,6 +213,7 @@ img {
   text-align: center;
   align-content: center;
   flex-direction: column;
+  z-index: 1000;
 }
 
 .skills__right{
@@ -263,12 +230,14 @@ img {
   margin-right: 0;
   animation: none;
   font-size: 20px;
+  color: var(--first-color-third);
 }
 
 .skills__subtitle{
   font-weight: 500;
   animation: none;
   font-family: var(--special-third-font);
+  color: var(--first-color-third);
 }
 
 .skills__icon,
@@ -282,10 +251,11 @@ img {
 .skills__name{
   font-size: 20px;
   font-weight: 500;
-  font-family: var(--special-second-font);
-  color: rgb(0, 0, 0);
+  font-family: var(--span-font);
+  color: var(--first-color-third);
+  z-index: 1000;
 }
-.skills__number,
+
 .skills__data{
   padding: 2rem;
   box-sizing: 10 10;
@@ -296,7 +266,7 @@ img {
   width: 30rem;
   height: 15px;
   border-radius: 2rem;
-  background: rgba(255, 249, 237, 0.197);
+  background: rgba(255, 255, 255, 0.609);
 }
 
 @media (max-width: 768px) {
@@ -319,7 +289,7 @@ img {
 
 .skills__percentage{
   border-radius: inherit;
-  background: rgba(255, 255, 255, 0.479);
+  background: var(--first-color-third-lighter);
   position: absolute;
   transition: width 1.5s cubic-bezier(0.1,0.42,0.85,1);
   width: 0;
@@ -336,11 +306,11 @@ img {
   height: 2rem;
   font-size: 18px;
   line-height: 2rem;
-  color: rgb(0, 0, 0);
+  color: var(--first-color-third);
+  font-family: var(--thai-font);
   text-align: center;
   border-radius: 0.1rem;
   animation: text 0.6s ease-in-out;
-  font-weight: bold;
 }
 
 @keyframes text {
@@ -381,9 +351,11 @@ img {
 .qualification__title{
   margin-left: 0%;
   font-family: var(--special-third-font);
+  color: var(--first-color-third);
   font-weight: 500;
   font-size: 50px;
   text-align: center;
+  z-index: 1000;
 }
 
 .qualification__timeline__container{
@@ -391,7 +363,8 @@ img {
 }
 
 .vertical-timeline-element-title{
-  font-family: var(--special-second-font);
+  font-family: var(--second-font);
+  color: var(--first-color-third);
 }
 
 .vertical-timeline-element-subtitle{
@@ -399,12 +372,12 @@ img {
   font-weight: 500;
   font-size: medium;
   text-align: center;
+  color: var(--first-color-third);
 }
 
 .vertical-timeline-element-date{
   font-family: var(--thai-font);
   font-weight: 500;
   font-size: medium;
-  text-align: center;
-  color: #000000;
+  color: var(--first-color-white);
 }
