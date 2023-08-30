@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import './Home.css';
-import timelineIcon from '../src/timelineIcon.png';
+import timelineIcon from '../../src/timelineIcon.png';
 import { useAnimation } from "framer-motion";
 
 const Home = () => {
@@ -45,9 +45,12 @@ const Home = () => {
                     <div className="home__content">
                       <div className="home__data">
                         <h1 className="home__title">
+                            I'm a...{" "}
                             <Typewriter
                                 options={{
-                                strings: ['system.out.println(ธนิษฐ์ฐา พิศาลบุตร);'],
+                                strings:["Front-End Enthusiasts", "Civil Engineer", "Developers", "Designers"],
+                                typeSpeed: 100,
+                                backSpeed: 20,
                                 cursorClassName: "home__title__cursor",
                                 wrapperClassName: "home__title",
                                 autoStart: true,
@@ -67,9 +70,9 @@ const Home = () => {
                             className="row-col"
                           >
                             <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '25px'}}>
-                              Hi there!👋🏻 I'm "Amy" Thanistha--Bisalputra.🏄🏻‍♀️ I'm a soph-<span style={{ textDecoration: 'line-through' }}>more </span>at the University of ILLINOIs,
-                              Urb<span style={{ textDecoration: 'line-through' }}>ana</span>-champaign, where I am pursuing "a" 👩‍🎓 Bachelor's *(degree) in
-                            <span style={{ textDecoration: 'line-through' }}>ciVIL</span>🏗️ Engineering.</span>
+                              Hi there!👋🏻 My name is "Amy" Thanistha--Bisalputra.🏄🏻‍♀️ I'm a soph-more at the University of ILLINOIs,
+                              Urbana-champaign, where I am pursuing "a" 👩‍🎓 Bachelor's *(degree) in 🏗️
+                            <span style={{ textDecoration: 'line-through' }}>ciVIL Engineering</span> (*CS)💻</span>
                         </motion.div>
                         </div>
                       </div>

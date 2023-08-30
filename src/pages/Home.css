@@ -133,7 +133,7 @@
 }
 
 .container{
-  max-width: 100%;
+  max-width: 95%;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -169,12 +169,13 @@
 
 .home__title{
   font-family: var(--thai-font);
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 200px;
-  font-size: 50px;
+  font-size: 55px;
   color: var(--first-color-white);
-  padding: 25px;
+  text-align: left;
   animation: none;
+  width: 100%;
 }
 
 .home__title__cursor{
@@ -203,7 +204,7 @@
   row-gap: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .skills__left{

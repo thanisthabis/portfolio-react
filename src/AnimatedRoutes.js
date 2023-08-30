@@ -1,14 +1,14 @@
 import './App.css';
-import Home from './Home.js';
+import Home from './pages/Home.js';
 import { AnimatePresence } from 'framer-motion';
-import Portfolio from './Portfolio.js';
+import Portfolio from './pages/portfolio/Portfolio.js';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation, useLoaderData } from 'react-router-dom';
 import React from 'react';
-import Midninestudios from './portfolio/Midninestudios.js';
-import Youtube from './portfolio/Youtube.js';
-import Organization from './portfolio/Organization.js';
-import Fatbakers from './portfolio/Fatbakers.js';
-import ContactMe from './ContactMe.js';
+import Midninestudios from './pages/portfolio/Midninestudios.js';
+import Youtube from './pages/portfolio/Youtube.js';
+import Organization from './pages/portfolio/Organization.js';
+import Fatbakers from './pages/portfolio/Fatbakers.js';
+import ContactMe from './pages/ContactMe.js';
 
 function AnimatedRoutes() {
     const location = useLocation();
