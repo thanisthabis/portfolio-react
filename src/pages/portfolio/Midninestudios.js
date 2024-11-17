@@ -1,11 +1,7 @@
 import React from 'react';
-import { useRef } from 'react';
 import { useEffect,useState,useContext } from 'react';
-import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
-import useScrollSnap from "react-use-scroll-snap";
 import './Midninestudios.css';
 import Typewriter from 'typewriter-effect';
-import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
 import transition from '../../../src/Transition.js';
 
 // Import Swiper React components
@@ -50,15 +46,12 @@ import dino7 from './img/dino7.JPG';
 import dino8 from './img/dino8.JPG';
 import dino11 from './img/dino11.JPG';
 import draw1 from './img/draw1.JPG';
-import draw3 from './img/draw3.PNG';
-import draw8 from './img/draw8.jpg';
 import mood1 from './img/mood1.JPG';
 import mood2 from './img/mood2.JPG';
 import mood4 from './img/mood4.PNG';
 import mood7 from './img/mood7.PNG';
 import green2 from './img/green2.jpg';
 import green3 from './img/green3.JPG';
-import green7 from './img/green7.JPG';
 import green8 from './img/green8.JPG';
 import green10 from './img/green10.JPG';
 import green11 from './img/green11.JPG';
@@ -67,8 +60,6 @@ import guess2 from './img/guess2.JPG';
 import guess3 from './img/guess3.JPG';
 import guess4 from './img/guess4.JPG';
 import guess6 from './img/guess6.JPG';
-import guess10 from './img/guess10.JPG';
-import guess11 from './img/guess11.jpg';
 import guess21 from './img/guess21.JPG';
 import guess22 from './img/guess22.JPG';
 import guess27 from './img/guess27.JPG';
@@ -86,7 +77,6 @@ import shirt8 from './img/shirt8.JPG';
 import shirt9 from './img/shirt9.JPG';
 import shirt11 from './img/shirt11.JPG';
 import shirt12 from './img/shirt12.JPG';
-import shirt13 from './img/shirt13.JPG';
 import new3 from './img/new3.JPG';
 import new4 from './img/new4.JPG';
 import new5 from './img/new5.jpg';
@@ -94,7 +84,7 @@ import new5 from './img/new5.jpg';
 
 const Midninestudios = () => {
     const [offsetY, setOffsetY] = useState(0);
-    const handleScroll  = () => setOffsetY(window.pageYOffset);
+    const handleScroll  = () => setOffsetY(window);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -104,11 +94,11 @@ const Midninestudios = () => {
 
     return (
         <div className="midninestudios">
-            <div className="midninestudios__background">
-                <section id="midninestudios__up"></section>
-                <section id="midninestudios__down"></section>
-                <section id="midninestudios__left"></section>
-                <section id="midninestudios__right"></section>
+            <div className="background">
+                <section id="background__up"></section>
+                <section id="background__down"></section>
+                <section id="background__left"></section>
+                <section id="background__right"></section>
             </div>
 
             <main className="midninestudios__main">
@@ -155,12 +145,6 @@ const Midninestudios = () => {
 
                                                 <div className="noImg"></div>
 
-                                                <div className="imgContainer">
-                                                    <div className="wrap" style={{transform: `translateY(-${offsetY * 0.3}px)` }}>
-                                                        <img className="graphics__image" src={draw3} alt=" "/>
-                                                    </div>
-                                                </div>
-
                                                 <div className="noImg"></div>
 
                                             </div>
@@ -168,11 +152,6 @@ const Midninestudios = () => {
                                             <div className="imgRow">
 
                                                 <div className="noImg"></div>
-                                                <div className="imgContainer">
-                                                    <div className="wrap" style={{transform: `translateY(-${offsetY * 0.8}px)` }}>
-                                                        <img className="graphics__image" src={draw8} alt=" "/>
-                                                    </div>
-                                                </div>
 
                                                 <div className="noImg"></div>
 
@@ -364,12 +343,6 @@ const Midninestudios = () => {
                                                     <img className="guess__image" src={guess6} alt=" "/>
                                                 </div>
                                                 <div className="guess__images">
-                                                    <img className="guess__image" src={guess10} alt=" "/>
-                                                </div>
-                                                <div className="guess__images">
-                                                    <img className="guess__image" src={guess11} alt=" "/>
-                                                </div>
-                                                <div className="guess__images">
                                                     <img className="guess__image" src={guess21} alt=" "/>
                                                 </div>
                                                 <div className="guess__images">
@@ -416,9 +389,6 @@ const Midninestudios = () => {
                                         </SwiperSlide>
                                         <SwiperSlide className="green__images">
                                             <img className="green__image" src={green3} alt=" "/>
-                                        </SwiperSlide>
-                                        <SwiperSlide className="green__images">
-                                            <img className="green__image" src={green7} alt=" "/>
                                         </SwiperSlide>
                                         <SwiperSlide className="green__images">
                                             <img className="green__image" src={green8} alt=" "/>
@@ -473,9 +443,6 @@ const Midninestudios = () => {
                                                     </div>
                                                     <div className="shirt__images">
                                                         <img className="shirt__image" src={shirt12} alt=" "/>
-                                                    </div>
-                                                    <div className="shirt__images">
-                                                        <img className="shirt__image" src={shirt13} alt=" "/>
                                                     </div>
                                                 </div>
                                         </div>

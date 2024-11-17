@@ -1,31 +1,13 @@
 import React, { useRef } from 'react';
-import { motion, useIsPresent, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import './ContactMe.css';
-import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
 import linkedin from '../assets/linkedin.svg';
 import resume from '../assets/resume.png';
 import github from '../assets/github.svg';
-import resume_pdf from'../assets/Resume_ThanisthaBisalputra.pdf';
+// import resume_pdf from'../assets/Resume_ThanisthaBisalputra.pdf';
 import logo from '../assets/favicon.jpg';
 import transition from '../../src/Transition.js';
-import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
-
-    const form = useRef();
-
-    const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_n14o6px', 'template_6z8nanx', form.current, 'P5Ska_bSpPmDCYw9W')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset();
-    };
-
     return (
         <div className="contactme">
             <div className="contactme__background">
@@ -47,23 +29,6 @@ const ContactMe = () => {
                                             <div className="contactme__logo">
                                                 <img src={logo} className="contactme__logo__img"/>
                                             </div>
-                                            <div className="contactme__emailbox">
-                                                        <form ref={form} onSubmit={sendEmail}>
-                                                            <div className="form-group">
-                                                                <label>Name:</label>
-                                                                <input type="text" name="user_name"/>
-                                                            </div>
-                                                            <div className="form-group">
-                                                                <label>Email:</label>
-                                                                <input type="email" name="user_email" />
-                                                            </div>
-                                                            <div className="form-group">
-                                                                <label>Message:</label>
-                                                                <textarea name="message" />
-                                                            </div>
-                                                            <input className="contactme__emailbox__send" type="submit" value="Send!" />
-                                                        </form>
-                                            </div>
                                             <div className="contactme__vertical">
                                                 <div className="contactme__info">
                                                     <div className="contactme__name">Amy Thanistha Bisalputra (she/her)</div>
@@ -83,9 +48,9 @@ const ContactMe = () => {
                                                         </a>
                                                     </div>
                                                     <div className="contactme__resume">
-                                                    <a href={resume_pdf} target='blank'>
+                                                    {/* <a href={resume_pdf} target='blank'>
                                                         <img src={resume} className="contactme__resume__img"/>
-                                                    </a>
+                                                    </a> */}
                                                     </div>
                                                 </div>
                                             </div>

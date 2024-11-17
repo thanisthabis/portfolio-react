@@ -13,13 +13,13 @@ footer {
     /*========== Colors ==========*/
 
     /* HSL color mode */
-    --first-color: hsl(336, 100%, 79%);
-    --first-color-second: #fe0055;
-    --first-color-third: #ff4083;
-    --first-color-third-lighter: #ff85b0;
-    --first-color-black: black;
-    --first-color-yellow: #f7ffb1;
-    --first-color-white: #ffffff;
+    --first-color: #bb8c94;
+    --first-color-second: #372216;
+    --first-color-third: #786a5d;
+    --first-color-third-lighter: #e8b19d;
+    --first-color-black: #372216;
+    --first-color-hover: #f3E0D1;
+    --first-color-white: #786a5d;
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
@@ -106,6 +106,55 @@ span {
   font-family: var(--span-font);
 }
 
+.background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #eed8e3;
+  z-index: -100;
+}
+
+#background__up {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #a7a1b8, #eed8e3);
+  filter: blur(80px);
+  animation: down 40s infinite;
+}
+
+#background__down {
+  position: absolute;
+  right: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #c8cbad, #a7a1b8);
+  filter: blur(80px);
+  animation: up 30s infinite;
+}
+
+#background__left {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #eed8e3, #c8cbad);
+  filter: blur(80px);
+  animation: right 40s infinite;
+}
+
+#background__right {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, #be6674, #ffe4c0);
+  filter: blur(80px);
+  animation: left 30s infinite;
+}
+
 /*==================== REUSABLE CSS CLASSES ====================*/
 
 .section {
@@ -178,6 +227,39 @@ span {
   font-style: italic;
 }
 
+/*==================== NAV ====================*/
+
+#dropdown-basic-button {
+  all: unset;
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--first-color-white);
+  font-weight: var(--font-medium);
+  font-family: var(--first-font);
+}
+
+#dropdown-basic-button:hover {
+  color: var(--first-color-second);
+  font-style: italic;
+}
+
+/* Style dropdown menu items */
+.dropdown-menu {
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown-item {
+  background-color: transparent;
+  font-size: 20px;
+  color: var(--first-color-white);
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+  color: var(--first-color-second);
+}
+
 /*==================== TRANSITION ====================*/
 
 .transition__slide-in{
@@ -200,4 +282,94 @@ span {
   height: 100vh;
   background: var(--first-color-white);
   transform-origin: top;
+}
+
+/*==================== NAV ====================*/
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+.spacer {width: 100%; height: 100px;}
+
+body {font-family: "Open Sans", sans-serif;}
+
+nav {
+  width: 100%; 
+  background-color: transparent; 
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  padding: 20px; 
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+nav .nav-bar {
+  padding: 20px; 
+  display: flex; 
+}
+nav .nav-bar .nav-bar_item {
+  list-style-type: none;
+  padding: 0px 20px;
+}
+nav .nav-bar .dropdown {
+  position: relative;
+}
+nav .nav-bar .dropdown:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 7px;
+  height: 7px;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: 0.2s ease-in-out;
+}
+nav .nav-bar .dropdown:hover:after{
+  transform: rotate(135deg);
+}
+nav .nav-bar .dropdown .project {
+  position: absolute;
+  transform: translateX(-20px) translateY(5px);
+  width: 150px;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+nav .nav-bar .dropdown:hover .project{
+  height: 220px;
+  
+  visibility: visible;
+}
+
+nav .nav-bar .dropdown .project .drop-item {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+nav .nav-bar .nav-bar_item a {
+  position: relative;
+  display: block; 
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+nav .nav-bar .nav-bar_item a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: 0.1s ease-in-out;
+}
+nav .nav-bar .nav-bar_item a:hover:after {
+  width: 100%;
 }

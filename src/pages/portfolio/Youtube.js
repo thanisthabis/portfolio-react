@@ -1,10 +1,5 @@
 import React from 'react';
-import { useRef } from 'react';
-import { useEffect,useState,useContext } from 'react';
-import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
-import useScrollSnap from "react-use-scroll-snap";
 import './Youtube.css';
-import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import transition from '../../../src/Transition.js';
@@ -12,11 +7,11 @@ import transition from '../../../src/Transition.js';
 const Youtube = () => {
     return (
         <div className="youtube">
-            <div className="youtube__background">
-                <section id="youtube__up"></section>
-                <section id="youtube__down"></section>
-                <section id="youtube__left"></section>
-                <section id="youtube__right"></section>
+            <div className="background">
+                <section id="background__up"></section>
+                <section id="background__down"></section>
+                <section id="background__left"></section>
+                <section id="background__right"></section>
             </div>
 
             <main className="youtube__main">

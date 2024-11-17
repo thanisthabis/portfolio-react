@@ -1,7 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import { motion, useIsPresent } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-import { Link } from "react-router-dom";
+import resume_pdf from'../assets/resumelink.pdf';
 
 const Header = () => {
     const headerMotion = {
@@ -22,9 +21,21 @@ const Header = () => {
             className="header"
             id="header"
         >
-            <Link to="/portfolio" className="nav__link">Projects</Link>
-            <Link to="/" className="nav__logo">AmyB./💐</Link>
-            <Link to="/contactme" className="nav__link">Contact ME</Link>
+          <nav>
+            <a class="logo" href="/">AmyB./💐</a>
+            <ul class="nav-bar">
+
+              <li class="nav-bar_item dropdown">
+                <a href="#">projects</a>
+                <ul class="project">
+                  <li class="drop-item"><a href="/portfolio">UX/UI</a></li>
+                  {/* <li class="drop-item"><a href="/midninestudios">Clothing line</a></li> */}
+                  <li class="drop-item"><a href="/youtube">Youtube</a></li>
+                </ul>
+              </li>
+              <li class="nav-bar_item"><a href={resume_pdf} target='blank'>resume</a></li>
+            </ul>
+          </nav>
         </motion.header>
     </div>
   );

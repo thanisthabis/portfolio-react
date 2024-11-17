@@ -1,0 +1,136 @@
+.design{
+  text-align: center;
+  height: 100%;
+}
+
+.design__main{
+width: 100%;
+height: 100%;
+}
+
+/*==================== ROBLOX ====================*/
+
+.design__roblox__section{
+  z-index: 1000;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.design__roblox__container{
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+  
+.design__roblox__content--intro{
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.design__roblox__content--img{
+  width: 50%;
+  height: auto;
+}
+
+.design__roblox__content--text{
+  width: 50%;
+  height: auto;
+}
+
+.design__roblox__content--text-name{
+  font-family: var(--second-font);
+  color: var(--first-color-third);
+  font-size: 50px;
+}
+
+.design__roblox__content--text-type{
+  font-family: var(--span-font);
+  color: var(--first-color-third);
+}
+
+.design__roblox__content--half{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+
+.design__roblox__content--container-left{
+  width: 50%;
+}
+
+.design__roblox__content--container-right{
+  width: 50%;
+}
+
+.design__roblox__content--description-header{
+  font-family: var(--special-second-font);
+  font-size: var(--big-font-size);
+  color: var(--first-color-second);
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.design__roblox__content--description{
+  font-family: var(--span-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-second);
+}
+
+.design__roblox__content--description--points{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  font-family: var(--span-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-second);
+}
+
+.design__roblox__content--description--points li{
+  margin: 2%;
+  font-family: var(--span-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-second);
+}
+
+.design__roblox__content--description--points-align{
+  align-items: center;
+  justify-content: center;
+  font-family: var(--span-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-second);
+}
+
+.design__roblox__content--description--points-align li{
+  text-align: start;
+  padding: 1%;
+}
+
+.design__roblox__content--description--points :hover{
+  color: var(--first-color-hover);
+}
+
+.design__roblox__content{
+  padding-top: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.design__roblox__content--slide{
+  padding-top: 5%;
+}
+
+.design__roblox__content--slide img{
+  border-radius: 50px;
+}
+
+.design__roblox__container-end{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20%;
+}
