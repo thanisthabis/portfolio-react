@@ -103,3 +103,125 @@
   gap: 1rem;
   width: 100%;
 }
+
+.contactme__content {
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  animation: slideLeft 1.5s ease forwards;
+}
+
+@keyframes slideLeft {
+    0% {
+      opacity: 0%;
+    }
+    25% {
+      opacity: 25%;
+    }
+    100% {
+      opacity: 100%;
+    }
+}
+
+.contactme__title {
+  font-size: var(--big-font-size);
+  font-family: var(--second-font);
+  color: var(--first-color-white);
+  margin-bottom: 0.5rem;
+}
+
+.contactme__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  font-family: var(--span-font);
+  color: var(--first-color-white);
+  margin-bottom: 2rem;
+}
+
+.contactme__vertical,
+.contactme__info {
+  margin-top: -0.5rem;
+  text-align: left;
+  margin-left: 2rem;
+  font-size: var(--normal-font-size);
+  font-family: var(--span-font);
+  color: var(--first-color-white);
+}
+
+.contactme__info div {
+  padding: 0.5rem;
+}
+
+.contactme__name {
+  font-size: larger;
+  font-weight: 500;
+  font-family: var(--thai-font);
+}
+
+.contactme__horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactme__logo,
+.contactme__logo__img{
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+}
+
+.form-group {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-group input, textarea {
+  background-color: rgba(255, 255, 255, 0.537);
+  border-color: var(--first-color);
+  border-radius: 10rem;
+}
+
+.contactme__emailbox__send {
+  background-color: none;
+  border-color: var(--first-color);
+  border-radius: 10rem;
+}
+
+.contactme__vertical {
+  justify-content: center;
+  align-items: center;
+}
+
+.contactme__links {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.contactme__links a{
+  padding: 0.5rem;
+}
+
+.contactme__linkedin,
+.contactme__linkedin__img {
+  max-width: 3rem;
+}
+
+.contactme__resume,
+.contactme__resume__img {
+  max-width: 3rem;
+  width: 3rem;
+}
+
+.contactme__github,
+.contactme__github__img {
+  max-width: 3rem;
+}
+
+.contactme__sources {
+  color: var(--first-color-white);
+}
+
+.contactme__sources a{
+  color: var(--first-color-white);
+}

@@ -7,6 +7,7 @@ import './Youtube.css';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
+import transition from '../../../src/Transition.js';
 
 const Youtube = () => {
     return (
@@ -82,4 +83,4 @@ const Youtube = () => {
     )
 }
 
-export default Youtube;
+export default transition(Youtube);

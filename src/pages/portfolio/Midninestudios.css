@@ -138,28 +138,53 @@
 
 .intro__description{
     margin-top: 5rem;
-    margin-left: 2rem;
-    width: 38rem;
+    margin-left: -10%;
+    width: 65%;
     text-align: justify;
     transform: translateX(150px);
-    animation: slideUp 1s ease forwards;
+    animation: slideLeft 1s ease forwards;
 }
 
 .intro__description span{
   color: var(--first-color-yellow);
+  font-size: 18px;
 }
 
 .intro__description :hover{
   color: var(--first-color-white);
 }
 
-@keyframes slideUp {
+@keyframes slideLeft {
     0% {
       transform: translateX(-600px);
     }
     100% {
       transform: translateX(0px);
     }
+}
+
+.intro__button,
+.intro__button__description__1{
+    margin-top: 0rem;
+    margin-left: 80%;
+    text-align: justify;
+}
+
+.intro__button__img{
+    width: 10%;
+    height: 5%;
+    margin-left: 80%;
+    margin-top: -5rem;
+}
+
+.intro__button__img:hover{
+  filter: grayscale(100%);
+}
+
+.intro__button__description__2{
+  margin-top: 0rem;
+  margin-left: 95%;
+  text-align: justify;
 }
 
 /*==================== LAYOUT ====================*/
@@ -187,15 +212,14 @@
     padding-top: 5rem;
     align-content: center;
     align-self: center;
-    padding-left: 20rem;
-    padding-right: 10rem;
+    padding-left: 25%;
     z-index: 1000;
 }
 
 .graphics__images{
     display: flex;
-    padding: 2px;
-	  transition: .3s;
+    padding: 5%;
+	  transition: 0.3s;
     overflow: hidden;
     flex-wrap: wrap;
 }
@@ -255,8 +279,8 @@
 
 .popup__images {
   display: flex;
-  width: 500px;
-  height: 500px;
+  width: 35%;
+  height: 25%;
   filter: grayscale(90%);
 }
 

@@ -16,13 +16,10 @@ function AnimatedRoutes() {
     return (
         <AnimatePresence>
             <Routes location={location} key={key}>
-                <Route exact path="/" element={<Home/>} />
-                <Route path="/portfolio" element={<Portfolio/>} />
                 <Route path="/midninestudios" element={<Midninestudios/>} />
                 <Route path="/organization" element={<Organization/>} />
                 <Route path="/youtube" element={<Youtube/>} />
                 <Route path="/fatbakers" element={<Fatbakers/>} />
-                <Route path="/contactme" element={<ContactMe/>} />
             </Routes>
         </AnimatePresence>
     )

@@ -5,10 +5,49 @@ import Typewriter from 'typewriter-effect';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import './Home.css';
-import timelineIcon from '../../src/timelineIcon.png';
+import timelineIcon from '../../src/assets/timelineIcon.png';
 import { useAnimation } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
+import Carousel from "../../src/assets/Carousal.jsx";
+import Card from "../../src/assets/Card.jsx";
+import Spline from '@splinetool/react-spline';
+import {Link} from 'react-router-dom';
+import transition from '../../src/Transition.js';
+import ThreeD from '../assets/ThreeD';
 
 const Home = () => {
+  // let cards = [
+  //   {
+  //     key: uuidv4(),
+  //     content: (
+  //       <Card text="ok" />
+  //     )
+  //   },
+  //   {
+  //     key: uuidv4(),
+  //     content: (
+  //       <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />
+  //     )
+  //   },
+  //   {
+  //     key: uuidv4(),
+  //     content: (
+  //       <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
+  //     )
+  //   },
+  //   {
+  //     key: uuidv4(),
+  //     content: (
+  //       <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />
+  //     )
+  //   },
+  //   {
+  //     key: uuidv4(),
+  //     content: (
+  //       <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg" />
+  //     )
+  //   }
+  // ];
 
   window.onload = function () {
     let bar = document.querySelectorAll('.skills__percentage');
@@ -43,6 +82,7 @@ const Home = () => {
                 <section className="home section" id="home">
                   <div className="section__container container">
                     <div className="home__content">
+                    
                       <div className="home__data">
                         <h1 className="home__title">
                             I'm a...{" "}
@@ -69,20 +109,22 @@ const Home = () => {
                             }}
                             className="row-col"
                           >
-                            <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '25px'}}>
-                              Hi there!👋🏻 My name is "Amy" Thanistha--Bisalputra.🏄🏻‍♀️ I'm a soph-more at the University of ILLINOIs,
-                              Urbana-champaign, where I am pursuing "a" 👩‍🎓 Bachelor's *(degree) in 🏗️
-                            <span style={{ textDecoration: 'line-through' }}>ciVIL Engineering</span> (*CS)💻</span>
+                            <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '23px'}}>
+                              Hi there!👋🏻 My name is "Amy" Thanistha--Bisalputra.🏄🏻‍♀️ <br></br> I'm a soph-more at the University of ILLINOIs,
+                              Urbana-Champaign, where I am pursuing a 👩‍🎓 Bachelor's degree in ciVIL Engineering with Informatics minor.
+                            </span>
                         </motion.div>
                         </div>
+                        <ThreeD/>
                       </div>
                     </div>
                   </div>
                 </section>
               </div>
-              <div className="home__swiper-slide">
+              {/* <div className="home__swiper-slide">
                 <section className="skills section" id="skills">
                   <div className="section__container container">
+                  
                     <div className="skills__left">
                       <h1 className="skills__title">-skills-</h1>
                       <h1 className="skills__subtitle">Front-End Developer</h1>
@@ -131,7 +173,7 @@ const Home = () => {
                     </div>
                   </div>
                 </section>
-              </div>
+              </div> */}
               <div className="home__swiper-slide">
                 <section className="qualification section" id="qualification">
                   <div className="section__container container">
@@ -197,4 +239,4 @@ const Home = () => {
     )
 };
 
-export default Home;
+export default transition(Home);

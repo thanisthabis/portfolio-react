@@ -6,6 +6,7 @@ import useScrollSnap from "react-use-scroll-snap";
 import './Midninestudios.css';
 import Typewriter from 'typewriter-effect';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
+import transition from '../../../src/Transition.js';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +21,7 @@ import "swiper/css/navigation";
 // import required modules
 import { EffectCards, EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 
+import Instagram from '../../assets/midnineLink.svg';
 import review1 from './img/1.jpg';
 import review2 from './img/2.JPG';
 import review3 from './img/3.JPG';
@@ -52,12 +54,8 @@ import draw3 from './img/draw3.PNG';
 import draw8 from './img/draw8.jpg';
 import mood1 from './img/mood1.JPG';
 import mood2 from './img/mood2.JPG';
-import mood3 from './img/mood3.JPG';
 import mood4 from './img/mood4.PNG';
-import mood6 from './img/mood6.PNG';
 import mood7 from './img/mood7.PNG';
-import mood8 from './img/mood8.PNG';
-import mood9 from './img/mood9.JPG';
 import green2 from './img/green2.jpg';
 import green3 from './img/green3.JPG';
 import green7 from './img/green7.JPG';
@@ -132,6 +130,14 @@ const Midninestudios = () => {
                                             embody this spirit. Based in Bangkok, Thailand, we offer a range of trendy t-shirts, sweatshirts, 
                                             and crop tops designed to inspire and empower teenagers. Our goal is to spark imagination and encourage 
                                             the use of creativity in everyday life.</span>
+                                        </div>
+                                        
+                                        <div clsssName="intro__button">
+                                            <div className="intro__button__description__1">Click</div>
+                                            <a href="https://www.instagram.com/midninestudios/" target="_blank" rel="noopener noreferrer">
+                                                <img src={Instagram} className="intro__button__img"/>
+                                            </a>
+                                            <div className="intro__button__description__2">to explore more!</div>
                                         </div>
                                     </div>
                                     <div className="graphics__content">
@@ -521,4 +527,4 @@ const Midninestudios = () => {
     )
 }
 
-export default Midninestudios;
+export default transition(Midninestudios);

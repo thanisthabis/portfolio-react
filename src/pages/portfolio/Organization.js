@@ -5,7 +5,7 @@ import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
 import useScrollSnap from "react-use-scroll-snap";
 import './Organization.css';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
-
+import transition from '../../../src/Transition.js';
 
 
 const Organization = () => {
@@ -79,4 +79,4 @@ const Organization = () => {
     )
 }
 
-export default Organization;
+export default transition(Organization);

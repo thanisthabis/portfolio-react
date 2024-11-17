@@ -5,7 +5,7 @@ import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
 import useScrollSnap from "react-use-scroll-snap";
 import './Fatbakers.css';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
-
+import transition from '../../../src/Transition.js';
 
 import thaisa from './img/thaisa.PNG';
 import thaisa1 from './img/thaisa1.PNG';
@@ -20,6 +20,15 @@ import thaisa9 from './img/thaisa9.PNG';
 import thaisalogo from './img/thaisalogo.PNG';
 
 const Fatbakers = () => {
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll  = () => setOffsetY(window.pageYOffset);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <div className="fatbakers">
             <div className="fatbakers__background">
@@ -51,77 +60,77 @@ const Fatbakers = () => {
                                             </div>
 
                                             <div className="fatbakersclub__frame__wrapper">
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.6}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisalogo} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">🏄🏻‍♀️</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.5}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">🎀</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.7}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa1} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">💐</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.8}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa2} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">🎟</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.5}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa3} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">🩰</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.9}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa4} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">🍒</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.7}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa5} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">👛</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.3}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa6} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">🧠</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.5}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa7} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">👚</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.8}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa8} alt=" "/>
                                                 </div>
                                                 <div className="fatbakersclub__frame__text">🏩</div>
                                             </div>
 
-                                            <div className="fatbakersclub__frame">
+                                            <div className="fatbakersclub__frame" style={{transform: `translateY(-${offsetY * 0.6}px)` }}>
                                                 <div className="fatbakersclub__frame__image">
                                                     <img className="fatbakersclub__image" src={thaisa9} alt=" "/>
                                                 </div>
@@ -140,4 +149,4 @@ const Fatbakers = () => {
     )
 }
 
-export default Fatbakers;
+export default transition(Fatbakers);

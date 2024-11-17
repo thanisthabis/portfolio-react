@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, useIsPresent, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import './Portfolio.css';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
+import transition from '../../../src/Transition.js';
 
 const Portfolio = () => {
     
@@ -41,10 +42,10 @@ const Portfolio = () => {
                                                     <span style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px',fontWeight: 500}}>studios</span>
                                                     <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '15px', fontWeight: 400}}>  --clothing line</span>
                                                 </Link>
-                                                <Link to="/organization" className="portfolio__link__organization">
+                                                {/* <Link to="/organization" className="portfolio__link__organization">
                                                     <span style={{ fontFamily: 'Playfair Display, serif, serif', fontSize: '50px',fontWeight: 500}}>University</span>
                                                     <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '20px',fontWeight: 500}}>organization</span>
-                                                </Link>
+                                                </Link> */}
                                                 <Link to="/fatbakers" className="portfolio__link__fatbakers">
                                                     <span style={{ fontFamily: 'Playfair Display, serif, serif', fontSize: '50px',fontWeight: 500}}>FatBakers</span>
                                                     <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '20px',fontWeight: 500}}>club</span>
@@ -65,4 +66,4 @@ const Portfolio = () => {
     )
 };
 
-export default Portfolio;
+export default transition(Portfolio);

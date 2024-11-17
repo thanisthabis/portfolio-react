@@ -111,7 +111,7 @@
 }
 
 .portfolio__links span{
-  color: var(--first-color-lighter);
+  color: var(--first-color-white);
 }
 
 .portfolio__links span:hover{
@@ -126,6 +126,7 @@
 .portfolio__link__midnine:hover{
     font-style: italic;
     text-decoration: underline;
+    color: var(--first-color-white);
 }
 
 .portfolio__link__organization{
@@ -136,6 +137,7 @@
 .portfolio__link__organization:hover{
     font-style: italic;
     text-decoration: underline;
+    color: var(--first-color-white);
 }
 
 .portfolio__link__fatbakers{
@@ -146,6 +148,7 @@
 .portfolio__link__fatbakers:hover{
     font-style: italic;
     text-decoration: underline;
+    color: var(--first-color-white);
 }
 
 .portfolio__link__youtube{
@@ -156,4 +159,5 @@
 .portfolio__link__youtube:hover{
   font-style: italic;
   text-decoration: underline;
+  color: var(--first-color-white);
 }
